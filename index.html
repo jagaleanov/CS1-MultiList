@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <style type="text/css">
 		body{
-			background: #CCC;
+			background:#888888;
 		}
 		.badge {
 			cursor: pointer;
@@ -28,13 +28,11 @@
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Ingresar materia</h5>
-						<form>
-							<div class="form-group">
-								<label for="subjectTxt">Nombre de la materia</label>
-								<input type="text" name="subject" id="subjectTxt" class="form-control" value="" autocomplete="off">
-							</div>
-							<input type="button" id="submitSubject" class="btn btn-primary" value="Guardar" onClick="insertAndPrintSubject()">
-						</form>
+						<div class="form-group">
+							<label for="subjectTxt">Nombre de la materia</label>
+							<input type="text" name="subject" id="subjectTxt" class="form-control" value="" autocomplete="off">
+						</div>
+						<input type="button" id="submitSubject" class="btn btn-primary" value="Guardar" onClick="insertAndPrintSubject()">
 					</div>
 				</div>
 			</div>
@@ -42,19 +40,17 @@
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Ingresar estudiante</h5>
-						<form>
-							<div class="form-group">
-								<label for="subject_to"><i class="icon-caret-right"></i> Materia</label>
-								<select name="subject_to" id="subject_to" class="custom-select" >
-									<option value="">--</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="nameTxt">Nombre del estudiante</label>
-								<input type="text" name="name" id="nameTxt" class="form-control" value="" autocomplete="off">
-							</div>
-							<input type="button" name="submit" class="btn btn-primary" value="Guardar" onClick="insertAndPrintStudent()">
-						</form>
+						<div class="form-group">
+							<label for="subject_to"><i class="icon-caret-right"></i> Materia</label>
+							<select name="subject_to" id="subject_to" class="custom-select" >
+								<option value="">--</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="nameTxt">Nombre del estudiante</label>
+							<input type="text" name="name" id="nameTxt" class="form-control" value="" autocomplete="off">
+						</div>
+						<input type="button" name="submit" class="btn btn-primary" value="Guardar" onClick="insertAndPrintStudent()">
 					</div>
 				</div>
 			</div>
@@ -62,7 +58,7 @@
 		<div class="card mx-4 mt-4">
 			<div class="card-body overflow-auto">
 				<h5 class="card-title">Lista generada</h5>
-				<table  style="text-align: center">
+				<table  style="text-align: center; font-size: 1.3em">
 					<thead>
 						<tr id="tr_subjects">
 						</tr>
