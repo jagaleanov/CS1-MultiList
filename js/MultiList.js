@@ -389,7 +389,7 @@ function printSubjects() {
 				$('#tr_subjects').append('<th id="th_arrow_1"><img src="img/arrow-right.png" alt="right-arrow" width="29"></th>');
 			}
 			
-			$('#tr_subjects').append('<th id="th_subject_1"><span class="badge badge-pill badge-info" onClick="delSubject(\''+headNode.getName()+'\')" title="Eliminar materia">'+headNode.getName()+'</span></th>');
+			$('#tr_subjects').append('<th id="th_subject_1"><span class="badge badge-pill badge-danger" onClick="delSubject(\''+headNode.getName()+'\')" title="Eliminar materia">'+headNode.getName()+'</span></th>');
 			
 			headNode = headNode.getNext();
 			counter++;
@@ -453,6 +453,7 @@ function insertAndPrintSubject() {
 	$('#subjectTxt').val("");
 	printSubjects();
 	printStudents();
+	$( "#subjectTxt" ).focus();
 }
 
 function insertAndPrintStudent() {
@@ -461,6 +462,7 @@ function insertAndPrintStudent() {
 	$('#nameTxt').val("");
 	printSubjects();
 	printStudents();
+	$( "#subject_to" ).focus();
 }
 
 function delSubject(subject){
