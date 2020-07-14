@@ -392,7 +392,7 @@ function printStudents() {
 
         for (var j = 0; j < quantMaxStudents; j++) {
 
-            if (counterSubj > 0) {//AÃ±adir espacio a la izquierda debajo de la flecha de materia
+            if (counterSubj > 0) {//Añadir espacio a la izquierda debajo de la flecha de materia
                 $('#tr_arrow_' + counterStud + '').append('<td class="td_student_' + counterSubj + '"></td>');
 
                 $('#tr_badge_' + counterStud + '').append('<td class="td_student_' + counterSubj + '"></td>');
@@ -428,7 +428,7 @@ function insertAndPrintSubject() {
         printStudents();
         $("#subjectTxt").focus();
     } else {
-        alert("Ingrese un dato vÃ¡lido");
+        alert("Ingrese un dato válido");
     }
 }
 
@@ -441,12 +441,12 @@ function insertAndPrintStudent() {
         printStudents();
         $("#subject_to").focus();
     } else {
-        alert("Ingrese un dato vÃ¡lido");
+        alert("Ingrese un dato válido");
     }
 }
 
 function delSubject(subject) {
-    var r = confirm("Â¿Desea eliminar la materia " + subject + "?");
+    var r = confirm("¿Desea eliminar la materia " + subject + "?");
     if (r === true) {
         myList.deleteSubject(subject);
         $('#subjectTxt').val("");
@@ -464,7 +464,7 @@ function delStudent(nameStudent, iSubject) {
         counter++;
     }
 
-    var r = confirm("Â¿Desea eliminar el estudiante " + nameStudent + " de " + tempSubject.getName() + "?");
+    var r = confirm("¿Desea eliminar el estudiante " + nameStudent + " de " + tempSubject.getName() + "?");
     if (r === true) {
 
         myList.deleteStudent(tempSubject.getName(), nameStudent);
