@@ -175,13 +175,17 @@ class SubjectsList {
                 temp = temp.getNext();
             }
         } else {//es el primero en la cola
-            if (temp === this.head && temp.getNext() === null) {//es unico
-                this.head = null;
-            } else {
-                var removed = this.head;
-                this.head = temp.getNext();
-                removed.setNext(null);
-            }
+			if (temp.getDown().getNodeHead() === null) {//esta vacio
+				if (temp === this.head && temp.getNext() === null) {//es unico
+					this.head = null;
+				} else {
+					var removed = this.head;
+					this.head = temp.getNext();
+					removed.setNext(null);
+				}
+			} else {
+				alert("No se puede retirar la materia " + name + ", tiene estudiantes matriculados");
+			}
         }
     }
 
